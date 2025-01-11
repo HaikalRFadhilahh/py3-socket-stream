@@ -2,7 +2,7 @@ import socket
 import subprocess
 import os
 
-host = "127.0.0.1"
+host = "0.0.0.0"
 port = int(os.getenv("PY3_PORT_SOCKET")) if os.getenv(
     "PY3_PORT_SOCKET") != None else 3000
 

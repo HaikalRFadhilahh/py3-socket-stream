@@ -1,8 +1,10 @@
 import socket
 import subprocess
+import os
 
 host = "127.0.0.1"
-port = 4321
+port = int(os.getenv("PY3_PORT_SOCKET")) if os.getenv(
+    "PY3_PORT_SOCKET") != None else 3000
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
